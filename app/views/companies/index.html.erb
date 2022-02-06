@@ -8,9 +8,17 @@
 <section>
   <h1>Companies</h1>
 
-  <ul>
-    <% @companies.each do |company| %>
-      <li><%= company['title'] %></li>
-    <% end %>
-  </ul>
+  <table>
+    <thead>
+      <tr>
+        <th>No.</th>
+        <th>Title</th>
+        <th>Status</th>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render partial: 'company', collection: @companies %>
+    </tbody>
+  </table>
 </section>
